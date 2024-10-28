@@ -65,13 +65,13 @@ atualizarTabuleiro (ConstructorTabuleiro t) =
   in return (ConstructorTabuleiro tabuleiroChecado)
 
 selecionaCasa :: TypeTabuleiro -> (Int, Int) -> IO TypeTabuleiro
-selecionaCasa (ConstructorTabuleiro t) (x, y) = do
+selecionaCasa (ConstructorTabuleiro t) (x, y) =
   let valorAtual = fst (t !! x !! y)
-    novoValor = if valorAtual == 2 
+      novoValor = if valorAtual == 2
                 then 3  -- Escolheu casa com bomba
                 else 1
-    linhaAtualizada = take y (t !! x) ++ [(novoValor, snd (t !! x !! y))] ++ drop (y + 1) (t !! x)
-    tabuleiroAtualizado = take x t ++ [linhaAtualizada] ++ drop (x + 1) t
+      linhaAtualizada = take y (t !! x) ++ [(novoValor, snd (t !! x !! y))] ++ drop (y + 1) (t !! x)
+      tabuleiroAtualizado = take x t ++ [linhaAtualizada] ++ drop (x + 1) t
   in return (ConstructorTabuleiro tabuleiroAtualizado)
 
 checaTabuleiroGameOver :: TypeTabuleiro -> Int

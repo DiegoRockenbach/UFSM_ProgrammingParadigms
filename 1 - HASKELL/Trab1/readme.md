@@ -22,6 +22,10 @@ Para resolver esse problema eu parti para implementar a função `main`, que ser
 - Encontrar fontes confiáveis para começar o programar e resolver erros (a documentação oficial de Haskell é pobre);
 - Entender o que estava acontecendo no código e por que havia sido feito daquele modo, quando a resolução vinha de ferramentas de IA.
 
+## Vídeo desmontração do código rodando
+
+[![Watch the video](https://raw.githubusercontent.com/DiegoRockenbach/UFSM_ProgrammingParadigms/main/1%20-%20HASKELL/Trab1/demo_video.png)](https://raw.githubusercontent.com/DiegoRockenbach/UFSM_ProgrammingParadigms/main/1%20-%20HASKELL/Trab1/demo_video.mp4)
+
 ## Referências (em ordem de relevância)
 
 > Ferramentas de Inteligência Artificial

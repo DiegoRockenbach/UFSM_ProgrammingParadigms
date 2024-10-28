@@ -24,7 +24,7 @@ Para resolver esse problema eu parti para implementar a função `main`, que ser
 
 ## Vídeo desmontração do código rodando
 
-[![Watch the video](https://raw.githubusercontent.com/DiegoRockenbach/UFSM_ProgrammingParadigms/main/1%20-%20HASKELL/Trab1/demo_video.jpg)](https://raw.githubusercontent.com/DiegoRockenbach/UFSM_ProgrammingParadigms/main/1%20-%20HASKELL/Trab1/demo_video.mp4)
+[![Watch the video](https://raw.githubusercontent.com/DiegoRockenbach/UFSM_ProgrammingParadigms/main/1%20-%20HASKELL/Trab1/demo_video.png)](https://raw.githubusercontent.com/DiegoRockenbach/UFSM_ProgrammingParadigms/main/1%20-%20HASKELL/Trab1/demo_video.mp4)
 
 ## Referências (em ordem de relevância)
 

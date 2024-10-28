@@ -24,8 +24,8 @@ gerarCoordenadaRandom (ConstructorTabuleiro t) linhas colunas = do
     linha <- randomRIO (0, linhas - 1)
     coluna <- randomRIO (0, colunas - 1)
     if fst ((t !! linha) !! coluna) == 2
-      then gerarCoordenadaRandom (ConstructorTabuleiro t) linhas colunas
-      else return (linha, coluna)
+    then gerarCoordenadaRandom (ConstructorTabuleiro t) linhas colunas
+    else return (linha, coluna)
 
 gerarMinas :: TypeTabuleiro -> Int -> Int -> Int -> IO TypeTabuleiro
 gerarMinas (ConstructorTabuleiro t) linhas colunas quantidadeMinas = do
@@ -51,7 +51,8 @@ contarMinasAdjacentes (ConstructorTabuleiro t) linha coluna =
             novaLinha < length t && 
             novaColuna < length (t !! novaLinha) && 
             fst ((t !! novaLinha) !! novaColuna) == 2 
-            then 1 else 0
+            then 1
+            else 0
   in sum (map checarMinas direcoes)
 
 atualizarTabuleiro :: TypeTabuleiro -> IO TypeTabuleiro
@@ -67,8 +68,8 @@ selecionaCasa :: TypeTabuleiro -> (Int, Int) -> IO TypeTabuleiro
 selecionaCasa (ConstructorTabuleiro t) (x, y) = do
   let valorAtual = fst (t !! x !! y)
     novoValor = if valorAtual == 2 
-                  then 3  -- Escolheu casa com bomba
-                  else 1
+                then 3  -- Escolheu casa com bomba
+                else 1
     linhaAtualizada = take y (t !! x) ++ [(novoValor, snd (t !! x !! y))] ++ drop (y + 1) (t !! x)
     tabuleiroAtualizado = take x t ++ [linhaAtualizada] ++ drop (x + 1) t
   in return (ConstructorTabuleiro tabuleiroAtualizado)
@@ -96,8 +97,8 @@ jogar tabuleiro = do
   estadoDeJogo <- return (checaTabuleiroGameOver newTabuleiro)
 
   if estadoDeJogo == 0 
-    then putStrLn "A casa escolhida continha uma bomba! Game over."
-    else jogar newTabuleiro
+  then putStrLn "A casa escolhida continha uma bomba! Game over."
+  else jogar newTabuleiro
 
 main :: IO ()
 main = do
